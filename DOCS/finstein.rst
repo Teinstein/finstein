@@ -1,7 +1,21 @@
-finstein module
-===============
+Finstein package
+================
 
-.. automodule:: finstein
+Submodules
+----------
+
+Finstein.fincalc module
+-----------------------
+
+.. automodule:: Finstein.fincalc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: Finstein
    :members:
    :undoc-members:
    :show-inheritance:
