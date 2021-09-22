@@ -10,8 +10,8 @@ def FV(pv:float, r:float, n:float, m = 1):
   :type r: float
   :param n: Number of Years
   :type n: float
-  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.
-  :type n: float
+  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.
+  :type m: float
   :return: float, None for -ve values of m.
   :rtype: float
   """
@@ -31,8 +31,8 @@ def PV(fv:float, c:float, r:float, n:float, m = 1):
   :type r: float
   :param n: Number of Years
   :type n: float
-  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.
-  :type n: float
+  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.
+  :type m: float
   :return: float, None for -ve values of m.
   :rtype: float
   """
@@ -54,8 +54,8 @@ def solve(fv = -1, pv = -1, r = -1, n = -1, m = 1):
   :type r: float
   :param n: Number of Years
   :type n: float
-  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.
-  :type n: float
+  :param m: Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.
+  :type m: float
   :return: The function returns the missing variable among fv,pv,r,n and None for -ve values of m. :#Note: ONLY INPUT 3 Parameters to find the fourth one. Parameter 'm' will be set automatically to if left unentered. 
   :rtype: float
   """
