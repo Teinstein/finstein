@@ -26,5 +26,7 @@ This Guide will help you set up the library.
 
 - To access the docs in HTML version, a shortcut to index.html is provided in DOCS folder.
 - To generate the new docs, first delete the Finstein.rst file present in the folder to generate a new one. Then enter the following commands in  shell/cmd terminal in the DOCS folder : (**Note** - Generate docs everytime the code is updated )
+
  ``sphinx-apidoc -o . ../Finstein/``
+
  ``make html``
