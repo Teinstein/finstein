@@ -12,6 +12,14 @@ Finstein.fincalc module
    :undoc-members:
    :show-inheritance:
 
+Finstein.finhyp module
+----------------------
+
+.. automodule:: Finstein.finhyp
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

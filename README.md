@@ -13,6 +13,7 @@ This Guide will help you set up the library.
 ## Running Tests
 - All test modules can be run at a time by simply opening a shell/cmd terminal in the **Tests** directory and typing -``python -m unittest``
 - To run a particular test type :``python -m unittest test_1.py `` 
+**Note: unittest should be installed on your system.**
 
 
 ## Installing and Uninstalling the Library
@@ -24,6 +25,6 @@ This Guide will help you set up the library.
 ## Accessing & Generating Docs
 
 - To access the docs in HTML version, a shortcut to index.html is provided in DOCS folder.
-- To generate the new docs file enter the following commands in  shell/cmd terminal : (**Note** - Generate docs everytime the code is updated )
- ``sphinx autodoc -o . ../Finstein``
+- To generate the new docs, first delete the Finstein.rst file present in the folder to generate a new one. Then enter the following commands in  shell/cmd terminal in the DOCS folder : (**Note** - Generate docs everytime the code is updated )
+ ``sphinx-apidoc -o . ../Finstein/``
  ``make html``

@@ -42,6 +42,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Finstein package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-Finstein.fincalc">Finstein.fincalc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Finstein.finhyp">Finstein.finhyp module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-Finstein">Module contents</a></li>
 </ul>
 </li>
@@ -91,7 +92,7 @@
 <li><p><strong>pv</strong> (<em>float</em>) – Present Value</p></li>
 <li><p><strong>r</strong> (<em>float</em>) – Rate of Interest/Discount Rate (in decimals eg: 0.05 for 5%)</p></li>
 <li><p><strong>n</strong> (<em>float</em>) – Number of Years</p></li>
-<li><p><strong>m</strong> – Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.</p></li>
+<li><p><strong>m</strong> (<em>float</em>) – Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -114,7 +115,7 @@
 <li><p><strong>c</strong> (<em>float</em>) – Coupon rate (in decimals eg: 0.05 for 5%)</p></li>
 <li><p><strong>r</strong> (<em>float</em>) – Rate of Interest/Discount Rate (in decimals eg: 0.05 for 5%)</p></li>
 <li><p><strong>n</strong> (<em>float</em>) – Number of Years</p></li>
-<li><p><strong>m</strong> – Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.</p></li>
+<li><p><strong>m</strong> (<em>float</em>) – Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -137,7 +138,7 @@
 <li><p><strong>pv</strong> (<em>float</em>) – Present Value</p></li>
 <li><p><strong>r</strong> (<em>float</em>) – Rate of Interest/Discount Rate (in decimals eg: 0.05 for 5%)</p></li>
 <li><p><strong>n</strong> (<em>float</em>) – Number of Years</p></li>
-<li><p><strong>m</strong> – Frequency of Interest Calculation (eg: 2 for Semi-annually), deafaults to 1.</p></li>
+<li><p><strong>m</strong> (<em>float</em>) – Frequency of Interest Calculation (eg: 2 for Semi-annually), defaults to 1.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -145,6 +146,138 @@
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Finstein.finhyp">
+<span id="finstein-finhyp-module"></span><h2>Finstein.finhyp module<a class="headerlink" href="#module-Finstein.finhyp" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finhyp.ttest">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finhyp.</span></span><span class="sig-name descname"><span class="pre">ttest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_tail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finhyp.ttest" title="Permalink to this definition"></a></dt>
+<dd><p>ttest(): Calculates T test for single sample, two tailed as well as single. This function works for Paired tests as well as the formula is same.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>float</em>) – Sample mean</p></li>
+<li><p><strong>mu</strong> (<em>float</em>) – Population mean/ Data mean</p></li>
+<li><p><strong>sd</strong> (<em>float</em>) – Standard Deviation</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – Sample size</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – P value Limit/Significance value (default:0.05)</p></li>
+<li><p><strong>two_tail</strong> (<em>Boolean</em>) – Enter true for conducting two-tailed test. (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[T score, P value, True/False (Test was conclusive or not)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finhyp.ttest2">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finhyp.</span></span><span class="sig-name descname"><span class="pre">ttest2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mudiff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_tail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finhyp.ttest2" title="Permalink to this definition"></a></dt>
+<dd><p>ttest2(): Calculates T test for two sampled data (independent), two tailed as well as single.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X1</strong> – Sample mean 1</p></li>
+<li><p><strong>X2</strong> – Sample mean 2</p></li>
+<li><p><strong>mudiff</strong> – mean difference</p></li>
+<li><p><strong>sd1</strong> (<em>float</em>) – Standard Deviation 1</p></li>
+<li><p><strong>sd2</strong> (<em>float</em>) – Standard Deviation 2</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – Sample size 1</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – Sample size 2</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – P value Limit/Significance value (default:0.05)</p></li>
+<li><p><strong>V</strong> (<em>Boolean</em>) – Enter True assuming equal variances. (default: False)</p></li>
+<li><p><strong>two_tail</strong> (<em>Boolean</em>) – Enter true for conducting two-tailed test. (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[T score, P value, True/False (Test was conclusive or not)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finhyp.ztest">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finhyp.</span></span><span class="sig-name descname"><span class="pre">ztest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_tail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finhyp.ztest" title="Permalink to this definition"></a></dt>
+<dd><p>ztest(): Calculates Z test for single sample, two tailed as well as single.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>float</em>) – Sample mean</p></li>
+<li><p><strong>mu</strong> (<em>float</em>) – Population mean/ Data mean</p></li>
+<li><p><strong>sd</strong> (<em>float</em>) – Standard Deviation</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – Sample size</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – P value Limit/Significance value (default:0.05)</p></li>
+<li><p><strong>two_tail</strong> (<em>Boolean</em>) – Enter true for conducting two-tailed test. (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Z value, Pvalue, True/False (Test was conclusive or not)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finhyp.ztest2">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finhyp.</span></span><span class="sig-name descname"><span class="pre">ztest2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mudiff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_tail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finhyp.ztest2" title="Permalink to this definition"></a></dt>
+<dd><p>ztest2(): Calculates Z test for two sampled data, two tailed as well as single.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X1</strong> – Sample mean 1</p></li>
+<li><p><strong>X2</strong> – Sample mean 2</p></li>
+<li><p><strong>mudiff</strong> – mean difference</p></li>
+<li><p><strong>sd1</strong> (<em>float</em>) – Standard Deviation 1</p></li>
+<li><p><strong>sd2</strong> (<em>float</em>) – Standard Deviation 2</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – Sample size 1</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – Sample size 2</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – P value Limit/Significance value (default:0.05)</p></li>
+<li><p><strong>two_tail</strong> (<em>Boolean</em>) – Enter true for conducting two-tailed test. (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Z score, P value, True/False (Test was conclusive or not)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finhyp.ztestp">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finhyp.</span></span><span class="sig-name descname"><span class="pre">ztestp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mudiff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_tail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finhyp.ztestp" title="Permalink to this definition"></a></dt>
+<dd><p>ztestp(): Calculates Z test for two population proportions, two tailed as well as single.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P1</strong> (<em>float</em>) – Proportion 1</p></li>
+<li><p><strong>P2</strong> (<em>float</em>) – Proportion 2</p></li>
+<li><p><strong>P</strong> (<em>float</em>) – Overall Proportion</p></li>
+<li><p><strong>mudiff</strong> (<em>float</em>) – mean difference</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – Sample size 2</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – Sample size 2</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – P value Limit/Significance value (default:0.05)</p></li>
+<li><p><strong>two_tail</strong> (<em>Boolean</em>) – Enter true for conducting two-tailed test. (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[Z value, Pvalue, True/False (Test was conclusive or not)]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
