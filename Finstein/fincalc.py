@@ -2,7 +2,8 @@ import math
 
 #Calculation of Future Value given pv,r,m,n
 def FV(pv:float, r:float, n:float, m = 1):
-  """FV(): A function to calculate Future Value.
+  """
+  FV(): A function to calculate Future Value.
 
   :param pv: Present Value
   :type pv: float
@@ -14,6 +15,8 @@ def FV(pv:float, r:float, n:float, m = 1):
   :type m: float
   :return: float, None for -ve values of m.
   :rtype: float
+
+  --------
   """
   if(m<=0):return None
   return pv*((1+r/m)**(m*n))
@@ -21,7 +24,8 @@ def FV(pv:float, r:float, n:float, m = 1):
 
 #Calculation of Present Value given fv,c,r,m,n
 def PV(fv:float, c:float, r:float, n:float, m = 1):
-  """PV(): A function to calculate Present Value.
+  """
+  PV(): A function to calculate Present Value.
 
   :param fv: Future Value
   :type fv: float
@@ -35,6 +39,9 @@ def PV(fv:float, c:float, r:float, n:float, m = 1):
   :type m: float
   :return: float, None for -ve values of m.
   :rtype: float
+
+  --------
+
   """
   if(m<=0):return None
   pv1,pv2=0,0
@@ -44,7 +51,8 @@ def PV(fv:float, c:float, r:float, n:float, m = 1):
 
 #Calculation of missing variable among fv,pv,r,n
 def solve(fv = -1, pv = -1, r = -1, n = -1, m = 1):
-  """solve(): A function to calculate missing variable among fv,pv,r,n.
+  """
+  solve(): A function to calculate missing variable among fv,pv,r,n.
 
   :param fv: Future Value
   :type fv: float
@@ -58,6 +66,8 @@ def solve(fv = -1, pv = -1, r = -1, n = -1, m = 1):
   :type m: float
   :return: The function returns the missing variable among fv,pv,r,n and None for -ve values of m. :#Note: ONLY INPUT 3 Parameters to find the fourth one. Parameter 'm' will be set automatically to if left unentered. 
   :rtype: float
+
+  --------
   """
 
 

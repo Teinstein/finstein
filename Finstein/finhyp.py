@@ -3,7 +3,8 @@ from scipy.stats import norm,t
 
 def ztest(X:float, mu:float, sd:float,n:float,alpha=0.05,two_tail=False):
 
-  """ztest(): Calculates Z test for single sample, two tailed as well as single.
+  """
+  ztest(): Calculates Z test for single sample, two tailed as well as single.
 
   :param X: Sample mean
   :type X: float
@@ -33,7 +34,8 @@ def ztest(X:float, mu:float, sd:float,n:float,alpha=0.05,two_tail=False):
   return [round(z, 3), round(pval, 4), conclusion]
 
 def ztest2(X1:float, X2:float, mudiff:float, sd1:float, sd2:float, n1:float, n2:float,alpha=0.05,two_tail=False):
-  """ztest2(): Calculates Z test for two sampled data, two tailed as well as single.
+  """
+  ztest2(): Calculates Z test for two sampled data, two tailed as well as single.
 
   :param X1: Sample mean 1
   :type X: float

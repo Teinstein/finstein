@@ -20,6 +20,14 @@ Finstein.finhyp module
    :undoc-members:
    :show-inheritance:
 
+Finstein.finspot module
+-----------------------
+
+.. automodule:: Finstein.finspot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
