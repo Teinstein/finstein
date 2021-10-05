@@ -4,6 +4,14 @@ Finstein package
 Submodules
 ----------
 
+Finstein.finbsm module
+----------------------
+
+.. automodule:: Finstein.finbsm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Finstein.fincalc module
 -----------------------
 

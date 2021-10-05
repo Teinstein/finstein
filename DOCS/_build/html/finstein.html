@@ -15,6 +15,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Finstein" href="modules.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,6 +36,58 @@
 <h1>Finstein package<a class="headerlink" href="#finstein-package" title="Permalink to this headline">¶</a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-Finstein.finbsm">
+<span id="finstein-finbsm-module"></span><h2>Finstein.finbsm module<a class="headerlink" href="#module-Finstein.finbsm" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finbsm.bsm">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finbsm.</span></span><span class="sig-name descname"><span class="pre">bsm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finbsm.bsm" title="Permalink to this definition">¶</a></dt>
+<dd><p>bsm(): Implementation of Black-Scholes formula for non-dividend paying options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> (<em>float</em>) – Current asset price</p></li>
+<li><p><strong>K</strong> (<em>float</em>) – Strike price of the option</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Time until option expiration</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Risk-free interest rate.</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Annualized volatility of the asset’s returns</p></li>
+<li><p><strong>call_value</strong> (<em>string</em>) – Takes input as “call”, “put”, “both”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Price of the options</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. Returns a dictionary when call_value is set to “both”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Finstein.finbsm.bsm_div">
+<span class="sig-prename descclassname"><span class="pre">Finstein.finbsm.</span></span><span class="sig-name descname"><span class="pre">bsm_div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Finstein.finbsm.bsm_div" title="Permalink to this definition">¶</a></dt>
+<dd><p>bsm_div(): Implementation of Black-Scholes formula for Dividend paying options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>S</strong> (<em>float</em>) – Current asset price</p></li>
+<li><p><strong>K</strong> (<em>float</em>) – Strike price of the option</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Time until option expiration</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Risk-free interest rate.</p></li>
+<li><p><strong>q</strong> (<em>float</em>) – The dividend rate of the asset.</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Annualized volatility of the asset’s returns.</p></li>
+<li><p><strong>call_value</strong> (<em>string</em>) – Takes input as “call”, “put”, “both”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Price of the options</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float. Returns a dictionary when call_value is set to “both”</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-Finstein.fincalc">
 <span id="finstein-fincalc-module"></span><h2>Finstein.fincalc module<a class="headerlink" href="#module-Finstein.fincalc" title="Permalink to this headline">¶</a></h2>
@@ -305,11 +358,21 @@
 
 
 <h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Finstein</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Finstein package</a></li>
+</ul>
+</li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Finstein</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">Finstein</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

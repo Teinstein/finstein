@@ -7,7 +7,7 @@ setup(
     description='A library for finacial calculations',
     author='Abhiraj Mengade',
     license='MIT',
-    install_requires=['scipy'],
+    install_requires=['scipy','numpy'],
     setup_requires=[],
     tests_require=[],
     test_suite='Tests',
