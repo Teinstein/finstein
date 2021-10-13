@@ -19,8 +19,8 @@ This Guide will help you set up the library.
 
 
 ## Installing and Uninstalling the Library
-
-- The Finstein Library can be installed be running the following command in the root directory of the library folder : ``pip install .``
+- Finstein Library can be directly installed by typing ``pip install Finstein`` in the terminal.
+- The Finstein Library can be installed be running the following command in the root directory of the library folder as well after cloning the repo  : ``pip install .``
 - Dependencies : **Scipy, Numpy** (will be automatically installed during pip installation of Library)
 - Also the library can be easily uninstalled using the following pip command : ``pip uninstall Finstein``
 
