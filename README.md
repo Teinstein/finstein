@@ -1,5 +1,7 @@
 # Welcome to Finstein Library!
 
+Finstein is a Library for performing various financial calculation tasks. Check DOCS for more info.
+
 This Guide will help you set up the library.
 
 **Project Report** - *https://docs.google.com/document/d/1LR-W4EDnaMJOEfQIT7pVvhHi-7t5b51rz76mmLPxPdg/edit?usp=sharing*
